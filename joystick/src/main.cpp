@@ -9,13 +9,16 @@
 
 
 #include "Arduino.h"
+#include "Servo.h"
 
 // time to wait in millis
-#define DELAY_TIME 500
+#define DELAY_TIME 200
 
 #define SERIAL_RATE 9600
 #define JOY_PIN_X 0
 #define JOY_PIN_Y 1
+
+#define SERVO_PIN 9
 
 // boundries of analogRead()
 #define ANALOG_READ_LOW 0
@@ -24,6 +27,8 @@
 // boundries for normalizing analogRead() from -90 to +90
 #define NORMALIZE_BOUND_LOW -90
 #define NORMALIZE_BOUND_HIGH 90
+// use this number to shift normalize value be between 0 to 180
+#define NORMALIZE_ORIGIN 90
 
 // the value that joystick has at first
 // they're usefull in normalizing
@@ -38,6 +43,10 @@ short int joyValueY = 0;
 
 short int joyValueXNormalized = 0;
 short int joyValueYNormalized = 0;
+
+Servo myServo;
+
+int myServoPos = 0;
 
 short int normalize(short int value){
   /*
@@ -71,6 +80,8 @@ void checkBoundries(short int &value){
 }
 
 void setup(){
+  myServo.attach(SERVO_PIN);
+
   // initialize joystick pins
   pinMode(JOY_PIN_X, INPUT);
   pinMode(JOY_PIN_Y, INPUT);
@@ -95,14 +106,20 @@ void loop(){
   joyValueY =  analogRead(JOY_PIN_Y);
   joyValueYNormalized = normalize(joyValueY) - joyYOriginNormalized;
   checkBoundries(joyValueYNormalized);
-
+/*
   Serial.print(joyValueX);
   Serial.print(' ');
   Serial.print(joyValueXNormalized);
   Serial.print(" - ");
   Serial.print(joyValueY);
   Serial.print(' ');
-  Serial.println(joyValueYNormalized);
+  Serial.print(joyValueYNormalized);
+  Serial.print(" - ");
+  */
+  myServoPos = joyValueXNormalized + NORMALIZE_ORIGIN;
+  myServo.write(myServoPos);
+  //Serial.println(myServoPos);
 
-  delay(DELAY_TIME);
+  // delay(DELAY_TIME);
+
 }
