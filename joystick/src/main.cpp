@@ -9,16 +9,13 @@
 
 
 #include "Arduino.h"
-#include "Servo.h"
 
 // time to wait in millis
-#define DELAY_TIME 200
+#define DELAY_TIME 1000
 
 #define SERIAL_RATE 9600
 #define JOY_PIN_X 0
 #define JOY_PIN_Y 1
-
-#define SERVO_PIN 9
 
 // boundries of analogRead()
 #define ANALOG_READ_LOW 0
@@ -43,10 +40,6 @@ short int joyValueY = 0;
 
 short int joyValueXNormalized = 0;
 short int joyValueYNormalized = 0;
-
-Servo myServo;
-
-int myServoPos = 0;
 
 short int normalize(short int value){
   /*
@@ -80,8 +73,6 @@ void checkBoundries(short int &value){
 }
 
 void setup(){
-  myServo.attach(SERVO_PIN);
-
   // initialize joystick pins
   pinMode(JOY_PIN_X, INPUT);
   pinMode(JOY_PIN_Y, INPUT);
@@ -106,20 +97,14 @@ void loop(){
   joyValueY =  analogRead(JOY_PIN_Y);
   joyValueYNormalized = normalize(joyValueY) - joyYOriginNormalized;
   checkBoundries(joyValueYNormalized);
-/*
+
   Serial.print(joyValueX);
   Serial.print(' ');
   Serial.print(joyValueXNormalized);
   Serial.print(" - ");
   Serial.print(joyValueY);
   Serial.print(' ');
-  Serial.print(joyValueYNormalized);
-  Serial.print(" - ");
-  */
-  myServoPos = joyValueXNormalized + NORMALIZE_ORIGIN;
-  myServo.write(myServoPos);
-  //Serial.println(myServoPos);
+  Serial.println(joyValueYNormalized);
 
-  // delay(DELAY_TIME);
-
+  delay(DELAY_TIME);
 }
