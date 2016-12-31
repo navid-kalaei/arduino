@@ -1,11 +1,12 @@
-/*
- * Servo
- * read joystick data, normalize, write to servo
- *
- * @author: Navid Kalaei <navidkalaie@gmail.com>
- * @github: @navid-kalaei
- * @license: MIT
- */
+/*************************************************
+ * Servo                                         *
+ * read joystick data, normalize, write to servo *
+ *                                               *
+ * @author: Navid Kalaei <navidkalaie@gmail.com> *
+ * @github: @navid-kalaei                        *
+ * @license: MIT                                 *
+ *************************************************/
+
 
 
 #include "Arduino.h"
