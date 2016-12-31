@@ -1,12 +1,13 @@
-/*
- * Blink
- * Turns on an LED on for one second,
- * then off for one second, repeatedly.
- *
- * @author: Navid Kalaei <navidkalaei@gmial.com>
- * @github: @navid-kalaei
- * @license: MIT
- */
+/*************************************************
+ * Blink                                         *
+ * Turns on an LED on for one second,            *
+ * then off for one second, repeatedly.          *
+ *                                               *
+ * @author: Navid Kalaei <navidkalaei@gmial.com> *
+ * @github: @navid-kalaei                        *
+ * @license: MIT                                 *
+ *************************************************/
+
 
 
 
