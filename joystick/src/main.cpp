@@ -1,11 +1,12 @@
-/*
- * Joystick
- * read joystick data, normalize from -90 to +90, write data to serial
- *
- * @author: Navid Kalaei <navidkalaie@gmail.com>
- * @github: @navid-kalaei
- * @license: MIT
- */
+/***********************************************************************
+ * Joystick                                                            *
+ * read joystick data, normalize from -90 to +90, write data to serial *
+ *                                                                     *
+ * @author: Navid Kalaei <navidkalaie@gmail.com>                       *
+ * @github: @navid-kalaei                                              *
+ * @license: MIT                                                       *
+ ***********************************************************************/
+
 
 #include "Arduino.h"
 
