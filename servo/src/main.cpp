@@ -6,3 +6,14 @@
  * @github: @navid-kalaei
  * @license: MIT
  */
+
+
+#include "Arduino.h"
+
+void setup() {
+
+}
+
+void  loop() {
+  
+}
