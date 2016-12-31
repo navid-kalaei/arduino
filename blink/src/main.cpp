@@ -8,9 +8,6 @@
  * @license: MIT                                 *
  *************************************************/
 
-
-
-
 #include "Arduino.h"
 
 #ifndef LED_BUILTIN
