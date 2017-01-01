@@ -1,11 +1,14 @@
-/*************************************************
- * Servo                                         *
- * read joystick data, normalize, write to servo *
- *                                               *
- * @author: Navid Kalaei <navidkalaie@gmail.com> *
- * @github: @navid-kalaei                        *
- * @license: MIT                                 *
- *************************************************/
+/****************************************************************
+ * Servo                                                        *
+ * read joystick data, normalize, write to servo                *
+ *                                                              *
+ * known issues: if it won't work, open serial monitor then try *
+ *                                                              *
+ * @author: Navid Kalaei <navidkalaie@gmail.com>                *
+ * @github: @navid-kalaei                                       *
+ * @license: MIT                                                *
+ ****************************************************************/
+
 
 
 
