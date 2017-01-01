@@ -34,16 +34,12 @@
 // the value that joystick has at first
 // they're usefull in normalizing
 short int joyXOrigin = 0;
-short int joyYOrigin = 0;
 
 short int joyXOriginNormalized = 0;
-short int joyYOriginNormalized = 0;
 
 short int joyValueX = 0;
-short int joyValueY = 0;
 
 short int joyValueXNormalized = 0;
-short int joyValueYNormalized = 0;
 
 Servo myServo;
 
@@ -85,14 +81,10 @@ void setup(){
 
   // initialize joystick pins
   pinMode(JOY_PIN_X, INPUT);
-  pinMode(JOY_PIN_Y, INPUT);
 
   joyXOrigin = analogRead(JOY_PIN_X);
-  joyYOrigin = analogRead(JOY_PIN_Y);
 
   joyXOriginNormalized = normalize(joyXOrigin);
-
-  joyYOriginNormalized = normalize(joyYOrigin);
 
   // wait until Serail is not available
   while(!Serial);
@@ -104,14 +96,9 @@ void loop(){
   joyValueXNormalized = normalize(joyValueX) - joyXOriginNormalized;
   checkBoundries(joyValueXNormalized);
 
-  joyValueY =  analogRead(JOY_PIN_Y);
-  joyValueYNormalized = normalize(joyValueY) - joyYOriginNormalized;
-  checkBoundries(joyValueYNormalized);
-
   myServoPos = joyValueXNormalized + NORMALIZE_ORIGIN;
   myServo.write(myServoPos);
   //Serial.println(myServoPos);
 
   // delay(DELAY_TIME);
-
 }
