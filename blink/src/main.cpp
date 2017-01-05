@@ -14,6 +14,10 @@
 #define LED_BUILTIN 13
 #endif
 
+//////////////////
+// time to wait //
+//////////////////
+
 #define DELAY_TIME 1000
 
 void setup()
