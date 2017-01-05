@@ -9,6 +9,7 @@
 
 
 #include "Arduino.h"
+#include <custom_joystick>
 
 // time to wait in millis
 #define DELAY_TIME 1000
@@ -17,14 +18,13 @@
 #define JOY_PIN_X 0
 #define JOY_PIN_Y 1
 
+custom_joystick joy;
 
 void setup(){
-  // initialize joystick pins
-  pinMode(JOY_PIN_X, INPUT);
-  pinMode(JOY_PIN_Y, INPUT);
+  joy.attach_pin_x(JOY_PIN_X);
+  joy.attach_pin_y(JOY_PIN_Y);
 
-  joyXOrigin = analogRead(JOY_PIN_X);
-  joyYOrigin = analogRead(JOY_PIN_Y);
+  joy.calibrate();
 
   joyXOriginNormalized = normalize(joyXOrigin);
 
