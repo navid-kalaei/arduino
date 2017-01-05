@@ -38,7 +38,7 @@ private:
 
   int normalize(int value);
 
-  bool checkBoundry(int value);
+  bool checkBoundry(int &value);
 public:
   custom_joystick ();
 

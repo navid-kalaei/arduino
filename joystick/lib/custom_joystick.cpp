@@ -45,3 +45,24 @@ void custom_joystick::colibrate()
   this->normalizedOriginX = this->normalize(this->originX);
   this->normalizedOriginY = this->normalize(this->originY);
 }
+
+ bool custom_joystick::checkBoundry(int &value)
+{
+  /*
+   * check if value is between normalized boudries or reset it to a boundry
+   *
+   * @param value: to check
+   * @return: true if value is valid or false otherwise
+   */
+
+   if(value > this->higherBound){
+     value = this->higherBound;
+     return false;
+   }
+   else if(value < this->lowerBound){
+     value = this->lowerBound;
+     return false;
+   }
+
+   return true;
+ }
