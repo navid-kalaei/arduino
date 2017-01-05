@@ -86,3 +86,8 @@ int custom_joystick::get_normalized_origin_y()
 {
   return this->normalize(this->originY);
 }
+
+int custom_joystick::get_x()
+{
+  return analogRead(this->pinX);
+}

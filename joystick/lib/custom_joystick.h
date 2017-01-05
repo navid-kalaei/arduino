@@ -68,7 +68,7 @@ public:
   // return raw values read from analog pins //
   /////////////////////////////////////////////
 
-  short int get_value_x();
+  int get_x();
   short int get_value_y();
 
   ////////////////////////////////////////////////////
