@@ -2,7 +2,7 @@
  * Custom joystick class for to work with joystick                 *
  *                                                                 *
  * Note: YOU MUST ALWAYS COLIBRATE BEFORE FIRST USAGE              *
- *                                                                 *
+ *            AND THRESHOLD IS NORMALIZED                                            *
  * @author: Navid Kalaei <navidkalaei@gmail.com>                   *
  * @license: MIT                                                   *
 *******************************************************************/
