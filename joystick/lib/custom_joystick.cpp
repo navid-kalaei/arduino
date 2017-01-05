@@ -46,6 +46,11 @@ void custom_joystick::colibrate()
   this->normalizedOriginY = this->normalize(this->originY);
 }
 
+void custom_joystick::set_threshold(int value)
+{
+    this->threshold = value;
+}
+
  bool custom_joystick::checkBoundry(int &value)
 {
   /*
