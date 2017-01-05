@@ -26,3 +26,8 @@ void custom_joystick::attach_pin_y(short pin)
 {
   this->pinY = pin;
 }
+
+void custom_joystick::set_lower_bound(int value)
+{
+  this->lowerBound = value;
+}
