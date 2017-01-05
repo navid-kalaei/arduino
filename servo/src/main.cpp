@@ -16,6 +16,7 @@
 #define DELAY_TIME 200
 
 #define SERIAL_RATE 9600
+
 #define JOY_PIN_X 0
 #define JOY_PIN_Y 1
 
