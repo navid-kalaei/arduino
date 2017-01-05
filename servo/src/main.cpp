@@ -22,6 +22,7 @@
 #define SERVO_PIN 9
 
 // servo can turn from 0 to 180 so it's origin is 90
+// and it's related to joy.lowerBound and joy.higherBound
 #define SERVO_ORIGIN 90
 
 custom_joystick joy;
