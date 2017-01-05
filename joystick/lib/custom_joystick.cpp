@@ -140,3 +140,8 @@ short int custom_joystick::get_direction_x()
 {
   return this->cmp(this->get_normalized_x(), this->threshold);
 }
+
+short int custom_joystick::get_direction_y()
+{
+  return this->cmp(this->get_normalized_y(), this->threshold);
+}
