@@ -7,8 +7,13 @@
  * @license: MIT                                                   *
 *******************************************************************/
 
+#ifndef ANALOG_READ_LOW
 #define ANALOG_READ_LOW 0
+#endif
+
+#ifndef ANALOG_READ_HIGH
 #define ANALOG_READ_HIGH 1023
+#endif
 
 class custom_joystick {
 private:
