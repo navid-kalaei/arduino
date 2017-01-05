@@ -53,7 +53,11 @@ public:
 
   void set_lower_bound(int value);
   void set_higher_bound(int value);
-  // init normalized origins.
+  
+  //////////////////////////////
+  // init normalized origins. //
+  //////////////////////////////
+
   void colibrate();
 
   //////////////////////////////////
