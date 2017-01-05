@@ -71,3 +71,13 @@ int custom_joystick::get_origin_x()
 {
   return this->originX;
 }
+
+int custom_joystick::get_origin_y()
+{
+  return this->originY;
+}
+
+int custom_joystick::get_normalized_origin_x()
+{
+  return this->normalize(this->originX);
+}

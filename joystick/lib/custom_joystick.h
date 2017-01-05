@@ -55,7 +55,7 @@ public:
   //////////////////////////////////
 
   int get_origin_x();
-  short int get_origin_y();
+  int get_origin_y();
 
   /////////////////////////////////////////
   // return normalized values of origins //
