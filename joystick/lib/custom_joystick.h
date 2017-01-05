@@ -10,7 +10,7 @@
 #define ANALOG_READ_LOW 0
 #define ANALOG_READ_HIGH 1023
 
-class custom_jostick {
+class custom_joystick {
 private:
   short int pinX;
   short int pinY;
