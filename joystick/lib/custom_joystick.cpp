@@ -113,10 +113,12 @@ int custom_joystick::get_y()
 
 int custom_joystick::get_normalized_x()
 {
-  return this->normalize(this->get_x());
+  int normalizedX = this->normalize(this->get_x());
+  return this->checkBoundry(normalizedX);
 }
 
 int custom_joystick::get_normalized_y()
 {
-  return this->normalize(this->get_y());
+  int normalizedY = this->normalize(this->get_y());
+  return this->checkBoundry(normalizedY);
 }
