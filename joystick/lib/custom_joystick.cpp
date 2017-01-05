@@ -66,3 +66,8 @@ void custom_joystick::colibrate()
 
    return true;
  }
+
+int custom_joystick::get_origin_x()
+{
+  return this->originX;
+}

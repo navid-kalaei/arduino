@@ -54,7 +54,7 @@ public:
   // return raw values of origins //
   //////////////////////////////////
 
-  short int get_origin_x();
+  int get_origin_x();
   short int get_origin_y();
 
   /////////////////////////////////////////
