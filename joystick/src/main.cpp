@@ -34,11 +34,11 @@ void setup(){
 void loop(){
   Serial.print(joy.get_x());
   Serial.print(' ');
-  Serial.print(joy.get_normalized_origin_x());
+  Serial.print(joy.get_calibrated_x());
   Serial.print(" - ");
   Serial.print(joy.get_y());
   Serial.print(' ');
-  Serial.println(joy.get_normalized_origin_y());
+  Serial.println(joy.get_calibrated_y());
 
   delay(DELAY_TIME);
 }
