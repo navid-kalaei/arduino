@@ -64,19 +64,19 @@ public:
   int get_normalized_origin_x();
   int get_normalized_origin_y();
 
-  ////////////////////////////////////////////////////
-  // return normalized values read from analog pins //
-  ////////////////////////////////////////////////////
-
-  int get_normalized_x();
-  int get_normalized_y();
-
   /////////////////////////////////////////////
   // return raw values read from analog pins //
   /////////////////////////////////////////////
 
   short int get_value_x();
   short int get_value_y();
+
+  ////////////////////////////////////////////////////
+  // return normalized values read from analog pins //
+  ////////////////////////////////////////////////////
+
+  int get_normalized_x();
+  int get_normalized_y();
 
   short int get_direction_x();
   short int get_direction_y();
