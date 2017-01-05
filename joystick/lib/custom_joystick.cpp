@@ -31,3 +31,8 @@ void custom_joystick::set_lower_bound(int value)
 {
   this->lowerBound = value;
 }
+
+void custom_joystick::set_higher_bound(int value)
+{
+  this->higherBound = value;
+}
