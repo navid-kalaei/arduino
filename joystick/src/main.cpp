@@ -9,7 +9,7 @@
 
 
 #include "Arduino.h"
-#include <custom_joystick>
+#include <custom_joystick.h>
 
 // time to wait in millis
 #define DELAY_TIME 1000
@@ -24,11 +24,7 @@ void setup(){
   joy.attach_pin_x(JOY_PIN_X);
   joy.attach_pin_y(JOY_PIN_Y);
 
-  joy.calibrate();
-
-  joyXOriginNormalized = normalize(joyXOrigin);
-
-  joyYOriginNormalized = normalize(joyYOrigin);
+  joy.colibrate();
 
   // wait until Serail is not available
   while(!Serial);
