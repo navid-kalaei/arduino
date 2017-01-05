@@ -1,3 +1,12 @@
+/*******************************************************************
+ * Custom joystick class for to work with joystick                 *
+ *                                                                 *
+ * Note: YOU MUST ALWAYS COLIBRATE BEFORE FIRST USAGE              *
+ *                                                                 *
+ * @author: Navid Kalaei <navidkalaei@gmail.com>                   *
+ * @license: MIT                                                   *
+*******************************************************************/
+
 #include "Arduino.h"
 #include "custom_joystick.h"
 
