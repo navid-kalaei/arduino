@@ -110,19 +110,21 @@ int custom_joystick::get_x()
 
 int custom_joystick::get_y()
 {
-  return analogRead(this->pinX);
+  return analogRead(this->pinY);
 }
 
 int custom_joystick::get_normalized_x()
 {
   int normalizedX = this->normalize(this->get_x());
-  return this->checkBoundry(normalizedX);
+  this->checkBoundry(normalizedX);
+  return normalizedX;
 }
 
 int custom_joystick::get_normalized_y()
 {
   int normalizedY = this->normalize(this->get_y());
-  return this->checkBoundry(normalizedY);
+  this->checkBoundry(normalizedY);
+  return normalizedY;
 }
 
 short int custom_joystick::cmp(int value1, int value2)

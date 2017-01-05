@@ -12,7 +12,7 @@
 #include <custom_joystick.h>
 
 // time to wait in millis
-#define DELAY_TIME 1000
+#define DELAY_TIME 250
 
 #define SERIAL_RATE 9600
 #define JOY_PIN_X 0
@@ -32,21 +32,13 @@ void setup(){
 }
 
 void loop(){
-  joyValueX = analogRead(JOY_PIN_X);
-  joyValueXNormalized = normalize(joyValueX) - joyXOriginNormalized;
-  checkBoundries(joyValueXNormalized);
-
-  joyValueY =  analogRead(JOY_PIN_Y);
-  joyValueYNormalized = normalize(joyValueY) - joyYOriginNormalized;
-  checkBoundries(joyValueYNormalized);
-
-  Serial.print(joyValueX);
+  Serial.print(joy.get_x());
   Serial.print(' ');
-  Serial.print(joyValueXNormalized);
+  Serial.print(joy.get_normalized_origin_x());
   Serial.print(" - ");
-  Serial.print(joyValueY);
+  Serial.print(joy.get_y());
   Serial.print(' ');
-  Serial.println(joyValueYNormalized);
+  Serial.println(joy.get_normalized_origin_y());
 
   delay(DELAY_TIME);
 }

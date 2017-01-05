@@ -51,8 +51,6 @@ private:
 
   bool checkBoundry(int &value);
 public:
-  custom_joystick ();
-
   short int cmp(int value1, int value2);
 
   void attach_pin_x(short int pin);
