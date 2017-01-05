@@ -40,8 +40,7 @@ private:
 
   bool checkBoundry(int value);
 public:
-  custom_jostick ();
-  virtual ~custom_jostick ();
+  custom_joystick ();
 
   void attach_pin_x(short int pin);
   void attach_pin_y(short int pin);

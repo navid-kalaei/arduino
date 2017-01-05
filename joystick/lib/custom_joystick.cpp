@@ -1,7 +1,7 @@
 #include "Arduino.h"
-#include "custom_jostick.h"
+#include "custom_joystick.h"
 
-custom_joystick::normalize(int value)
+int custom_joystick::normalize(int value)
 {
   /*
    * a wrapper for map built-in function
