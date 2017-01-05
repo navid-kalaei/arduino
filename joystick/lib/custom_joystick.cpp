@@ -29,11 +29,13 @@ int custom_joystick::normalize(int value)
 
 void custom_joystick::attach_pin_x(short pin)
 {
+  pinMode(pin, INPUT);
   this->pinX = pin;
 }
 
 void custom_joystick::attach_pin_y(short pin)
 {
+  pinMode(pin, INPUT);
   this->pinY = pin;
 }
 
