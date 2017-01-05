@@ -48,6 +48,8 @@ private:
 public:
   custom_joystick ();
 
+  short int cmp(int value1, int value2);
+
   void attach_pin_x(short int pin);
   void attach_pin_y(short int pin);
 

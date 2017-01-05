@@ -122,3 +122,21 @@ int custom_joystick::get_normalized_y()
   int normalizedY = this->normalize(this->get_y());
   return this->checkBoundry(normalizedY);
 }
+
+short int custom_joystick::cmp(int value1, int value2)
+{
+  if(value1 > value2){
+    return 1;
+  }
+  else if(value1 > value2){
+    return -1;
+  }
+  else{
+    return 0;
+  }
+}
+
+short int custom_joystick::get_direction_x()
+{
+  return this->cmp(this->get_normalized_x(), this->threshold);
+}
