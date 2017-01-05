@@ -14,6 +14,8 @@
 #define LED_BUILTIN 13
 #endif
 
+#define DELAY_TIME 1000
+
 void setup()
 {
   //////////////////////////////////////////////
@@ -35,7 +37,7 @@ void loop()
   // wait for a second //
   ///////////////////////
 
-  delay(1000);
+  delay(DELAY_TIME);
 
   ////////////////////////////////////////////////
   // turn the LED off by making the voltage LOW //
@@ -47,5 +49,5 @@ void loop()
   // wait for a second //
   ///////////////////////
 
-  delay(1000);
+  delay(DELAY_TIME);
 }
