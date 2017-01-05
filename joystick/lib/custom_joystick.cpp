@@ -91,3 +91,8 @@ int custom_joystick::get_x()
 {
   return analogRead(this->pinX);
 }
+
+int custom_joystick::get_y()
+{
+  return analogRead(this->pinX);
+}

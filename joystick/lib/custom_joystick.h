@@ -69,7 +69,7 @@ public:
   /////////////////////////////////////////////
 
   int get_x();
-  short int get_value_y();
+  int get_y();
 
   ////////////////////////////////////////////////////
   // return normalized values read from analog pins //
