@@ -24,8 +24,8 @@ private:
   // boundries for normalization //
   /////////////////////////////////
 
-  int lowerBound;
-  int higherBound;
+  int lowerBound = -90;
+  int higherBound = 90;
 
   int normalizedOriginX;
   int normalizedOriginY;
