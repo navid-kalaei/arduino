@@ -140,6 +140,16 @@ short int custom_joystick::cmp(int value1, int value2)
   }
 }
 
+int custom_joystick::get_calibrated_x()
+{
+  return this->get_normalized_x() - this->normalizedOriginX;
+}
+
+int custom_joystick::get_calibrated_y()
+{
+  return this->get_normalized_y() - this->normalizedOriginY;
+}
+
 short int custom_joystick::get_direction_x()
 {
   return this->cmp(this->get_normalized_x(), this->threshold);

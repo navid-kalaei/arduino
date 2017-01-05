@@ -95,6 +95,9 @@ public:
   int get_normalized_x();
   int get_normalized_y();
 
+  int get_calibrated_x();
+  int get_calibrated_y();
+
   ///////////////////////////////////////////////////////////
   // according to threshold return if direction the joy is //
   ///////////////////////////////////////////////////////////
