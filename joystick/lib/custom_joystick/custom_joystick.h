@@ -65,7 +65,7 @@ public:
   // init normalized origins. //
   //////////////////////////////
 
-  void colibrate();
+  void calibrate();
 
   void set_threshold(int value);
 

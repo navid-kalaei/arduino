@@ -49,7 +49,7 @@ void custom_joystick::set_higher_bound(int value)
   this->higherBound = value;
 }
 
-void custom_joystick::colibrate()
+void custom_joystick::calibrate()
 {
   this->originX = analogRead(this->pinX);
   this->originY = analogRead(this->pinY);

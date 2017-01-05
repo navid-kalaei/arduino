@@ -24,7 +24,7 @@ void setup(){
   joy.attach_pin_x(JOY_PIN_X);
   joy.attach_pin_y(JOY_PIN_Y);
 
-  joy.colibrate();
+  joy.calibrate();
 
   // wait until Serail is not available
   while(!Serial);
