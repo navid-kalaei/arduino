@@ -90,6 +90,10 @@ public:
   int get_normalized_x();
   int get_normalized_y();
 
+  ///////////////////////////////////////////////////////////
+  // according to threshold return if direction the joy is //
+  ///////////////////////////////////////////////////////////
+
   short int get_direction_x();
   short int get_direction_y();
 };
