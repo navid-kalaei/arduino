@@ -16,14 +16,28 @@
 #define  LED_BUILTIN 13
 #endif
 
-// time to wait in milis
+///////////////////////////
+// time to wait in milis //
+///////////////////////////
+
 #define DELAY_TIME 1000
 
-// uptime
+////////////
+// uptime //
+////////////
+
 unsigned long int curTime = 0;
-// last time LED_BUILTIN toggled
+
+///////////////////////////////////
+// last time LED_BUILTIN toggled //
+///////////////////////////////////
+
 unsigned long int prevTime = 0;
-//LED_BUILTIN status
+
+///////////////////////
+//LED_BUILTIN status //
+///////////////////////
+
 bool ledStatus = false;
 
 void setup() {
@@ -34,11 +48,22 @@ void setup() {
 void loop(){
   curTime = millis();
   if(curTime-prevTime >= DELAY_TIME){
-    // update last time led toggled
+    //////////////////////////////////
+    // update last time led toggled //
+    //////////////////////////////////
+
     prevTime = curTime;
-    // toggle led status
+
+    ///////////////////////
+    // toggle led status //
+    ///////////////////////
+
     ledStatus = !ledStatus;
-    // assign led status to led pin
+
+    //////////////////////////////////
+    // assign led status to led pin //
+    //////////////////////////////////
+
     digitalWrite(LED_BUILTIN, ledStatus);
   }
 }
