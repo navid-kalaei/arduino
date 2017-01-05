@@ -7,6 +7,8 @@
  * @license: MIT                                                   *
 *******************************************************************/
 
+#define ANALOG_READ_LOW 0
+#define ANALOG_READ_HIGH 1023
 
 class custom_jostick {
 private:
@@ -17,8 +19,8 @@ private:
   // joy pin values in its origin //
   //////////////////////////////////
 
-  int originX;
-  int originY;
+  int originX = 0;
+  int originY = 0;
 
   /////////////////////////////////
   // boundries for normalization //
@@ -30,15 +32,13 @@ private:
   int normalizedOriginX;
   int normalizedOriginY;
 
-  int normalizedX;
-  int normalizedY;
-
   //////////////////////////////////////////////////////////////////////////////
   // get value and map it from analog boundries(0-1023) to joystick boundries //
   //////////////////////////////////////////////////////////////////////////////
 
   int normalize(int value);
 
+  bool checkBoundry(int value);
 public:
   custom_jostick ();
   virtual ~custom_jostick ();
