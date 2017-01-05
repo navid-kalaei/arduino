@@ -11,7 +11,10 @@
 #include "Arduino.h"
 #include <custom_joystick.h>
 
-// time to wait in millis
+////////////////////////////
+// time to wait in millis //
+////////////////////////////
+
 #define DELAY_TIME 250
 
 #define SERIAL_RATE 9600
@@ -26,7 +29,10 @@ void setup(){
 
   joy.calibrate();
 
-  // wait until Serail is not available
+  ////////////////////////////////////////
+  // wait until Serail is not available //
+  ////////////////////////////////////////
+
   while(!Serial);
   Serial.begin(SERIAL_RATE);
 }
