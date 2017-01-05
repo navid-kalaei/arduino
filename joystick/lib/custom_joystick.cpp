@@ -1,6 +1,7 @@
 #include "Arduino.h"
 #include "custom_joystick.h"
 
+
 int custom_joystick::normalize(int value)
 {
   /*
@@ -35,4 +36,12 @@ void custom_joystick::set_lower_bound(int value)
 void custom_joystick::set_higher_bound(int value)
 {
   this->higherBound = value;
+}
+
+void custom_joystick::colibrate()
+{
+  this->originX = analogRead(this->pinX);
+  this->originY = analogRead(this->pinY);
+  this->normalizedOriginX = this->normalize(this->originX);
+  this->normalizedOriginY = this->normalize(this->originY);
 }
