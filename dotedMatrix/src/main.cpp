@@ -55,5 +55,6 @@ void loop(){
   print_char('M');
   print_char('A');
   print_char('N');
-  print_char(' ');
+  lc.clearDisplay(DISPLAY_ADDR);
+  delay(DELAY_TIME);
 }
