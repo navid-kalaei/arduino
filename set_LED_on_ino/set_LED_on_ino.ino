@@ -16,4 +16,5 @@ void setup() {
 
 void loop() {
   digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000)
 }
